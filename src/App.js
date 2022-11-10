@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import { DatePickerComp } from "./component/datepicker";
+import { ExportIntoPDF } from "./features/exportPDF";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AddSubscription } from "./features/addSubscription";
+import { ShowAddAubscriptionDetails } from "./features/showAddSubscriptionDetail";
+import { Subscription } from "./features/HomePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Subscription />
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route element={<AddSubscription />} path="/" />
+    //     <Route
+    //       element={<ShowAddAubscriptionDetails />}
+    //       path="/showAddSubscriptionDetails"
+    //     />
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
 
